@@ -1,0 +1,10 @@
+cards:
+  duplicate-cards: 2
+  normal-card-range:
+    from: 1
+    to: 12
+  colors:
+    - blue
+    - red
+    - yellow
+    - green
