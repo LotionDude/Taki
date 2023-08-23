@@ -1,7 +1,10 @@
 package lnd.lotan.cards.colorcards;
 
 import lnd.lotan.cards.Card;
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Setter(AccessLevel.PROTECTED)

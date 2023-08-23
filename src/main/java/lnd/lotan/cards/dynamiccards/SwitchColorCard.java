@@ -1,8 +1,8 @@
 package lnd.lotan.cards.dynamiccards;
 
-import lnd.lotan.gamelogic.GameContext;
-import lnd.lotan.TurnResult;
 import lnd.lotan.cards.Card;
+import lnd.lotan.gamelogic.GameContext;
+import lnd.lotan.gamelogic.TurnResult;
 import lombok.Getter;
 
 @Getter

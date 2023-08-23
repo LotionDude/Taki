@@ -1,12 +1,12 @@
 package lnd.lotan.cards.colorcards;
 
-import lnd.lotan.gamelogic.GameContext;
-import lnd.lotan.TurnResult;
 import lnd.lotan.cards.Card;
+import lnd.lotan.gamelogic.GameContext;
+import lnd.lotan.gamelogic.TurnResult;
 import lombok.Getter;
 
 @Getter
-public class PlusTwoCard extends ColorCard{
+public class PlusTwoCard extends ColorCard {
 
   public PlusTwoCard(String color) {
     super(color);

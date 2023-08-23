@@ -8,3 +8,8 @@ cards:
     - red
     - yellow
     - green
+
+spring:
+  output:
+    ansi:
+      enabled: "always"

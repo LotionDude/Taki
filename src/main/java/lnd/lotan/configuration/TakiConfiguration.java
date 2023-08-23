@@ -1,3 +1,3 @@
-package lnd.lotan.gamelogic;
+package lnd.lotan.configuration;
 
 public class TakiConfiguration {}

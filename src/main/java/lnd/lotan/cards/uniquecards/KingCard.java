@@ -2,7 +2,7 @@ package lnd.lotan.cards.uniquecards;
 
 import lnd.lotan.cards.Card;
 import lnd.lotan.gamelogic.GameContext;
-import lnd.lotan.TurnResult;
+import lnd.lotan.gamelogic.TurnResult;
 import lombok.Getter;
 
 @Getter
