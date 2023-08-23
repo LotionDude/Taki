@@ -1,10 +1,13 @@
 package lnd.lotan.gamemanagement;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
+@Component
 public class GameBuilderInstances {
   private final Map<String, TakiGameManagerBuilder> gameBuilderInstances;
 
