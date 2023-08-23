@@ -1,5 +1,6 @@
 package lnd.lotan.controllers;
 
+import lnd.lotan.gamemanagement.GameBuilderInstances;
 import lnd.lotan.gamemanagement.GameInstances;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -12,21 +13,31 @@ import org.springframework.web.bind.annotation.*;
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class TakiGameManagerController {
   private GameInstances gameInstances;
+  private GameBuilderInstances gameBuilderInstances;
 
   // TODO: Most of the functions implemented should return objects stating if something has
   // succeeded or not,and if not, give a valid reason
 
   // TODO: Most of these requests should have request body models
 
+  @PostMapping("/instance/builder")
+  public String createGameBuilderInstance() {
+    return this.gameBuilderInstances.createGameBuilderInstance();
+  }
+
   @PostMapping("/instance")
-  public String createGameInstance() {
-    return gameInstances.createGameInstanceBuilder();
+  public void createGameInstance(@RequestParam String gameInstanceIdentifier) {
+    this.gameBuilderInstances
+        .buildGameInstance(gameInstanceIdentifier)
+        .ifPresent(
+            gameInstance ->
+                this.gameInstances.addGameManager(gameInstanceIdentifier, gameInstance));
   }
 
   @PostMapping("/player")
   public boolean addPlayerToGameInstance(
-          @RequestBody String gameInstanceIdentifier, @RequestParam String playerIdentifier) {
-    return this.gameInstances.addPlayer(gameInstanceIdentifier, gameInstanceIdentifier);
+      @RequestParam String gameInstanceIdentifier, @RequestParam String playerIdentifier) {
+    return this.gameBuilderInstances.addPlayer(gameInstanceIdentifier, playerIdentifier);
   }
 
   @DeleteMapping("/instance")
