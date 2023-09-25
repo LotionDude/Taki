@@ -1,3 +1,4 @@
 package lnd.lotan.configuration;
 
-public class TakiConfiguration {}
+public class TakiConfiguration {
+}

@@ -8,18 +8,18 @@ import lombok.Getter;
 @Getter
 public class PlusThreeCard implements Card {
 
-  @Override
-  public TurnResult play(GameContext gameContext) {
-    return null;
-  }
+    @Override
+    public TurnResult play(GameContext gameContext) {
+        return null;
+    }
 
-  @Override
-  public boolean isPlayable(Card previousCard) {
-    return false;
-  }
+    @Override
+    public boolean isPlayable(Card previousCard) {
+        return false;
+    }
 
-  @Override
-  public String getRepresentation() {
-    return null;
-  }
+    @Override
+    public String getRepresentation() {
+        return null;
+    }
 }

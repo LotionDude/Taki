@@ -1,3 +1,4 @@
 package lnd.lotan.gamelogic;
 
-public class TurnResult {}
+public class TurnResult {
+}

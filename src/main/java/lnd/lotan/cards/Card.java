@@ -4,9 +4,9 @@ import lnd.lotan.gamelogic.GameContext;
 import lnd.lotan.gamelogic.TurnResult;
 
 public interface Card {
-  TurnResult play(GameContext gameContext);
+    TurnResult play(GameContext gameContext);
 
-  boolean isPlayable(Card previousCard);
+    boolean isPlayable(Card previousCard);
 
-  String getRepresentation();
+    String getRepresentation();
 }

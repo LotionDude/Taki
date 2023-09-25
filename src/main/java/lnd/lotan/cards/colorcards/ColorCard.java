@@ -10,5 +10,5 @@ import lombok.Setter;
 @Setter(AccessLevel.PROTECTED)
 @RequiredArgsConstructor
 public abstract class ColorCard implements Card {
-  private final String color;
+    private final String color;
 }

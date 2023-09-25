@@ -1,6 +1,7 @@
 cards:
+  starting-amount: 7
   duplicate-cards: 2
-  normal-card-range:
+  card-range:
     from: 1
     to: 12
   colors:
