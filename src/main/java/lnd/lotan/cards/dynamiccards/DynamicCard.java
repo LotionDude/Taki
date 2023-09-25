@@ -10,5 +10,5 @@ import lombok.Setter;
 @Setter(AccessLevel.PROTECTED)
 @RequiredArgsConstructor
 public abstract class DynamicCard implements Card {
-  private final String previousColor;
+    private final String previousColor;
 }

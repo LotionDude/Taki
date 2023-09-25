@@ -13,5 +13,9 @@ import org.springframework.stereotype.Component;
 @EnableConfigurationProperties
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class GameConfiguration {
-  private CardConfiguration cardConfiguration;
+    private CardConfiguration cardConfiguration;
+
+    public GameConfiguration(GameConfiguration gameConfiguration) {
+        this.cardConfiguration = new CardConfiguration(gameConfiguration.cardConfiguration);
+    }
 }
