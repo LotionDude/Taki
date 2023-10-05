@@ -1,5 +1,6 @@
-package lnd.lotan.cards;
+package lnd.lotan.gamelogic;
 
+import lnd.lotan.cards.Card;
 import lnd.lotan.cards.colorcards.*;
 import lnd.lotan.configuration.CardConfiguration;
 import lnd.lotan.configuration.Range;
@@ -28,8 +29,8 @@ public class Deck {
         this.mergeDeck(this.createDeck(cardConfiguration)).shuffle(cardConfiguration.getSeed());
     }
 
-    public Deck drawCards(int drawAmount) {
-        return new Deck(ListUtilities.flushToNewList(this.cards, drawAmount));
+    public List<Card> drawCards(int drawAmount) {
+        return ListUtilities.flushIntoNewList(this.cards, drawAmount);
     }
 
     /* TODO: Generate an instance of the Random object with a randomized seed at the start of every new game. */
@@ -75,5 +76,9 @@ public class Deck {
         }})));
 
         return deck;
+    }
+
+    public Card peek() {
+        return this.cards.get(0);
     }
 }

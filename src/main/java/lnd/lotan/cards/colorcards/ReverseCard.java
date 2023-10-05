@@ -7,6 +7,7 @@ import lombok.Getter;
 
 @Getter
 public class ReverseCard extends ColorCard {
+    public static final String NAME = "reverseCard";
 
     public ReverseCard(String color) {
         super(color);
@@ -22,8 +23,4 @@ public class ReverseCard extends ColorCard {
         return false;
     }
 
-    @Override
-    public String getRepresentation() {
-        return null;
-    }
 }

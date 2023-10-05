@@ -7,6 +7,7 @@ import lombok.Getter;
 
 @Getter
 public class UniversalTakiCard extends DynamicCard {
+    public static final String NAME = "universalTaki";
 
     public UniversalTakiCard(String color) {
         super(color);
@@ -22,8 +23,4 @@ public class UniversalTakiCard extends DynamicCard {
         return false;
     }
 
-    @Override
-    public String getRepresentation() {
-        return null;
-    }
 }

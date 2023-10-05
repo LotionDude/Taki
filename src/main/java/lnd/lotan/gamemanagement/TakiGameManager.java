@@ -3,9 +3,11 @@ package lnd.lotan.gamemanagement;
 import lnd.lotan.configuration.GameConfiguration;
 import lnd.lotan.gamelogic.GameContext;
 import lnd.lotan.gamelogic.GameHistory;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 public class TakiGameManager {
     private final GameHistory gameHistory;
     private final GameContext gameContext;
@@ -15,6 +17,7 @@ public class TakiGameManager {
         this.gameContext = new GameContext(playerIdentifiers, gameConfiguration.getCardConfiguration());
         this.gameHistory = new GameHistory();
         this.gameConfiguration = gameConfiguration;
-        System.out.println();
+
+        playerIdentifiers.forEach(System.out::println);
     }
 }

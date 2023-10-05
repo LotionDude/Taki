@@ -7,6 +7,7 @@ import lombok.Getter;
 
 @Getter
 public class SwitchColorCard extends DynamicCard {
+    public static final String NAME = "switchColor";
 
     public SwitchColorCard(String color) {
         super(color);
@@ -22,8 +23,4 @@ public class SwitchColorCard extends DynamicCard {
         return false;
     }
 
-    @Override
-    public String getRepresentation() {
-        return null;
-    }
 }

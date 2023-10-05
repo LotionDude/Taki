@@ -1,12 +1,16 @@
 package lnd.lotan.cards.colorcards;
 
 import lnd.lotan.cards.Card;
+import lnd.lotan.cards.visitor.CardVisitor;
+import lnd.lotan.cards.visitor.NumberCardVisitor;
 import lnd.lotan.gamelogic.GameContext;
 import lnd.lotan.gamelogic.TurnResult;
 import lombok.Getter;
 
 @Getter
 public class NumberCard extends ColorCard {
+    public static final String NAME = "number";
+
     private final int number;
 
     public NumberCard(String color, int number) {
@@ -21,11 +25,12 @@ public class NumberCard extends ColorCard {
 
     @Override
     public boolean isPlayable(Card previousCard) {
-        return false;
+        return previousCard.isPlayable(new NumberCardVisitor(this));
     }
 
     @Override
-    public String getRepresentation() {
-        return null;
+    public boolean isPlayable(CardVisitor cardVisitor) {
+        return cardVisitor.isNumberCardPlayable(this);
     }
+
 }

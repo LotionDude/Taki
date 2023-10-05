@@ -7,6 +7,7 @@ import lombok.Getter;
 
 @Getter
 public class StopCard extends ColorCard {
+    public static final String NAME = "stopCard";
 
     public StopCard(String color) {
         super(color);
@@ -22,8 +23,4 @@ public class StopCard extends ColorCard {
         return false;
     }
 
-    @Override
-    public String getRepresentation() {
-        return null;
-    }
 }

@@ -1,5 +1,6 @@
 package lnd.lotan.gamemanagement;
 
+import lnd.lotan.exceptions.GameNonExistentException;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -21,5 +22,9 @@ public class GameInstances {
     // TODO: add conditions for if an instance can be deleted
     public boolean removeGameInstance(String gameInstanceIdentifier) {
         return Optional.ofNullable(this.gameInstances.remove(gameInstanceIdentifier)).isPresent();
+    }
+
+    public TakiGameManager getGameManager(String gameIdentifier) throws GameNonExistentException {
+        return Optional.ofNullable(this.gameInstances.get(gameIdentifier)).orElseThrow(() -> new GameNonExistentException(gameIdentifier));
     }
 }

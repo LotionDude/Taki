@@ -1,4 +1,4 @@
-package lnd.lotan.cards.uniquecards;
+package lnd.lotan.cards.wildcards;
 
 import lnd.lotan.cards.Card;
 import lnd.lotan.gamelogic.GameContext;
@@ -6,7 +6,8 @@ import lnd.lotan.gamelogic.TurnResult;
 import lombok.Getter;
 
 @Getter
-public class KingCard implements Card {
+public class PlusThreeCard extends WildCard {
+    public static final String NAME = "plusThree";
 
     @Override
     public TurnResult play(GameContext gameContext) {
@@ -18,8 +19,4 @@ public class KingCard implements Card {
         return false;
     }
 
-    @Override
-    public String getRepresentation() {
-        return null;
-    }
 }

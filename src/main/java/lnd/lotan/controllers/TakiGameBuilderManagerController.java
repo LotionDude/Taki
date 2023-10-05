@@ -27,6 +27,8 @@ public class TakiGameBuilderManagerController {
 
     @PostMapping("/instance")
     public void createGameInstance(@RequestParam String gameInstanceIdentifier) {
+        System.out.println(gameInstanceIdentifier);
+
         this.gameBuilderInstances
                 .buildGameInstance(gameInstanceIdentifier)
                 .ifPresent(
